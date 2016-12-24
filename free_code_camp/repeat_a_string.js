@@ -13,3 +13,14 @@ function repeatedStringNumTimes(str, num){
   }
   return newStr;
 }
+
+// RECURSIVE SOLUTION:
+
+function repeatedStringNumTimes(str, num){
+  if(num < 0)
+    return '';
+  if(num === 1)
+    return str;
+  else
+    return str + repeatedStringNumTimes(str, num - 1);
+}
