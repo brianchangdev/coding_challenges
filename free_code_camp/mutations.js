@@ -5,7 +5,9 @@ second string are present in the first, ignoring case.
 
 The arguments ["hello", "hey"] should return false because the string "hello" does not contain a "y".
 
-Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien"." */
+Lastly, ["Alien", "line"], should return true because all of the letters in "line" are present in "Alien"." 
+
+SOLUTION: */
 
 function mutation(arr){
   var test = arr[1].toLowerCase();
@@ -17,3 +19,12 @@ function mutation(arr){
   }
     return true;
 }
+
+
+/* EXPLANATION
+
+1. First make strings both lowercase to make it easier to compare.
+2. Loop through test to compare to target
+3. indexOf returns the index within the calling string object
+4. loop through test characters and if any of them is not found (-1) return false
+5. If they are all found, the loop will finish and returns true. */
